@@ -1,0 +1,63 @@
+
+PowerShell Cheat Sheet
+
+1. Calculator Operations
+You can perform basic arithmetic operations directly in PowerShell:
+
+# Addition
+PS C:\> 5 + 3
+8
+
+# Subtraction
+PS C:\> 10 - 2
+8
+
+# Multiplication
+PS C:\> 7 * 4
+28
+
+# Division
+PS C:\> 10 / 2
+5
+
+2. IP Configuration
+To view your IP configuration, use the Get-NetIPAddress cmdlet:
+
+PS C:\> Get-NetIPAddress
+
+For more detailed information, you can use:
+
+PS C:\> ipconfig
+
+3. Ping a Host
+To check the connectivity to a host, use the Test-Connection cmdlet:
+
+PS C:\> Test-Connection -ComputerName google.com -Count 4
+
+This will ping google.com four times.
+
+4. SSH to a Raspberry Pi
+To connect to a Raspberry Pi or any other SSH server, use the ssh command:
+
+PS C:\> ssh pi@<raspberry_pi_ip_address>
+
+Replace <raspberry_pi_ip_address> with the actual IP address of your Raspberry Pi. If you have a custom port, you can specify it with the -p option:
+
+PS C:\> ssh pi@<raspberry_pi_ip_address> -p 22
+
+Additional Tips
+
+- List Files and Directories:
+  PS C:\> Get-ChildItem
+
+- Change Directory:
+  PS C:\> Set-Location C:\Path\To\Directory
+
+- Copy Files:
+  PS C:\> Copy-Item -Path C:\source\file.txt -Destination C:\destination\file.txt
+
+- Move Files:
+  PS C:\> Move-Item -Path C:\source\file.txt -Destination C:\destination\file.txt
+
+- Delete Files:
+  PS C:\> Remove-Item -Path C:\path\to\file.txt
