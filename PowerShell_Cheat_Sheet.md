@@ -4,6 +4,18 @@ A practical PowerShell reference for daily engineering, Git, Python, and project
 
 ---
 
+# Table of Contents
+
+- #basic-calculator
+- #navigation
+- #file-management
+- #file-information
+- [Search & Discovery] #networking
+- [Git Essentials](#gitthon Development](#python-development[Useful Aliases](#useful-aliases)
+er
+
+---
+
 # Basic Calculator
 
 PowerShell can perform arithmetic directly.
@@ -128,6 +140,20 @@ Set-Location docs
 
 ```powershell
 cd ..
+```
+
+---
+
+## Clear Console
+
+```powershell
+cls
+```
+
+or
+
+```powershell
+Clear-Host
 ```
 
 ---
@@ -275,6 +301,14 @@ Get-Content README.md -Tail 20
 
 ---
 
+## Show Folder Size
+
+```powershell
+(Get-ChildItem -Recurse | Measure-Object -Property Length -Sum).Sum
+```
+
+---
+
 # Search & Discovery
 
 ## Find Markdown Files
@@ -393,6 +427,22 @@ Specific file:
 
 ```powershell
 git diff README.md
+```
+
+---
+
+## Show Current Branch
+
+```powershell
+git branch --show-current
+```
+
+---
+
+## List Branches
+
+```powershell
+git branch
 ```
 
 ---
@@ -554,3 +604,13 @@ git commit -m "updates"
 ```
 
 unless you intentionally want to commit everything.
+
+Preferred workflow:
+
+```powershell
+git status
+git diff filename.py
+git add filename.py
+git commit -m "feat: meaningful change"
+git push
+```
