@@ -1,0 +1,6 @@
+git --version
+git clone https://github.com/RogieTheGreat/Personal-Shell-Codes.git
+cd Personal-Shell-Codes
+code .
+wsl --install
+ubuntu
